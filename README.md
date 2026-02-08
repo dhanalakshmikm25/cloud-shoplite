@@ -16,3 +16,107 @@ This transforms a traditional microservices demo into a **self-healing intellige
 **Core Idea:**  
 LLM + Observability + Kubernetes Control Plane = Autonomous Operations
 
+
+---
+
+## 🧩 Microservices
+
+| Service | Technology | Responsibility |
+|------|------|------|
+| Users Service | Flask | User management |
+| Catalog Service | Flask | Product listing |
+| Orders Service | Flask + PostgreSQL (RDS) | Order processing |
+| AI-Ops Bot | FastAPI | Log analysis & auto-recovery |
+| Gateway | Nginx | Routing & API aggregation |
+| Frontend | React + Vite | Monitoring dashboard |
+
+---
+
+## ☁️ AWS Infrastructure
+
+- Amazon **EKS** Kubernetes cluster
+- Amazon **RDS PostgreSQL**
+- AWS **ELB** Load Balancer
+- AWS **CloudWatch** centralized logging & metrics
+- Docker containerized workloads
+
+---
+
+## 🤖 AI-Ops Capabilities
+
+### Detection
+- CloudWatch error summarization
+- Top failing endpoints identification
+- Pod crash detection
+- Deployment health checks
+
+### Diagnosis
+- Log pattern analysis using LLM
+- Root-cause reasoning
+- Configuration validation
+
+### Action (Self-Healing)
+- Restart failed deployments
+- Scale replicas
+- Apply recovery playbooks
+- Suggest configuration fixes
+
+---
+
+## 🧠 MCP Infrastructure Agent
+
+A host-level Model Context Protocol (MCP) agent allows the LLM to behave like an SRE:
+
+- Reads Kubernetes YAML manifests
+- Executes `kubectl` commands
+- Inspects system logs
+- Validates configurations
+- Performs guided remediation
+
+**Example**
+
+> "Why are orders failing?"
+> → AI checks logs → finds DB timeout → restarts deployment → scales replicas
+
+---
+
+## 📊 Observability
+
+- Centralized logs (CloudWatch)
+- Failure analytics
+- Endpoint error ranking
+- Automated incident summaries
+
+---
+
+## 🛠️ Tech Stack
+
+**Backend:** Flask, FastAPI  
+**Frontend:** React, Vite  
+**Infra:** Docker, Kubernetes, Nginx  
+**Cloud:** AWS EKS, RDS, ELB, CloudWatch  
+**Database:** PostgreSQL  
+**AI:** LLM-powered reasoning agents + MCP protocol
+
+---
+
+## 🎯 Key Learning Outcomes
+
+- Cloud-native microservices deployment
+- Kubernetes operational workflows
+- AI-assisted DevOps & SRE automation
+- Observability-driven debugging
+- Autonomous remediation systems
+
+---
+
+## ⭐ Why This Project Matters
+
+Modern production systems fail due to operational complexity — not code.
+
+CloudShop Lite demonstrates how AI can:
+- Understand infrastructure
+- Diagnose incidents
+- Execute recovery actions
+
+This project explores the future of **Autonomous Cloud Operations (AIOps + Platform Engineering + LLMs).**
